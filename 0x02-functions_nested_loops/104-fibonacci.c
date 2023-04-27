@@ -6,12 +6,12 @@
  */
 int numLength(int num)
 {
-	int Length = 0
+	int length = 0;
 		if (!num)
 		{
 			return (1);
 		}
-	whole(num)
+	while (num)
 	{
 		num = num / 10
 		length += 1;
