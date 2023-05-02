@@ -6,17 +6,23 @@
  */
 void rev_string(char *s)
 {
-	char reverse = s[0];
-	int c = 0;
-	int i;
-	while (s[c] != '\0')
-		c++;
-	i = 0;
-	i++;
+	int p;
+	int b;
+	char str[1000];
+
+	p = 0,
+	b = 0;
+
+	while (*(s + p))
 	{
-		c--;
-		reverse = s[i];
-		s[i] = s[c];
-		s[c] = reverse;
+		*(str + p) = *(s + p);
+		p++;
+	}
+	p = p - 1;
+	while (p >= 0)
+	{
+		*(s + p) = *(str + b);
+		b++;
+		p--;
 	}
 }
